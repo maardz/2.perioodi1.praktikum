@@ -6,21 +6,13 @@
 
 </head>
 <body>
-  <h1>1. page</h1>
-
-	<?php
-     $link_file = "second_page.php";
-     $name = "Mölder";
+  <?php $page_link = "second_page.php";
+    $name = "Marge";
+    $lastname = "Mölder";
     ?>
-   
-   <a href="<?php echo "{$link_file}?name={$name}"; ?>">Teisele lehele</a><br>
-    <?php 
-      print_r($_GET); echo "<br>";
-      echo $_GET["firstname"];
-      $jada = array("Marge", "Mölder"); echo "<br>";
-      echo $jada[1];
-    ?>
-	</a>
+    <a href="<?php echo $page_link.'?name='.$name."&lastname=".$lastname ?>">2. page</a>
+    <?php $example = array("name" => "Marge", "lastname" => "Mölder"); ?><br>
+    <?php echo $_GET["test"]; ?>
 
 </body>
 </html>
